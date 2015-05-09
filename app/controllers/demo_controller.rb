@@ -9,4 +9,11 @@ class DemoController < ApplicationController
   def hello
   end
   
+  def other_hello
+    redirect_to(:controller => 'demo', :action => 'index')
+  end
+  
+  def lynda
+    redirect_to("http://www.lynda.com")
+  end
 end
