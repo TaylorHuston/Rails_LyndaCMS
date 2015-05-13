@@ -1,5 +1,21 @@
 Rails.application.routes.draw do
 
+  get 'pages_controller/index'
+
+  get 'pages_controller/show'
+
+  get 'pages_controller/new'
+
+  get 'pages_controller/create'
+
+  get 'pages_controller/edit'
+
+  get 'pages_controller/update'
+
+  get 'pages_controller/delete'
+
+  get 'pages_controller/destroy'
+
   #get 'demo/index'
   root 'demo#index'
   match ':controller(/:action(/:id))' , :via => [:get, :post]
