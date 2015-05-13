@@ -49,7 +49,7 @@ class SubjectsController < ApplicationController
   def destroy
     subject = Subject.find(params[:id]).destroy
     flash[:notice] = "Subject '#{subject.name}' destroyed successfully."
-    redirect_to(:action => "index")
+    redirect_to(:action => 'index')
   end
   
   private
