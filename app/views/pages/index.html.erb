@@ -5,6 +5,7 @@
   
   <%= link_to("Add New Page", {:action => "new"}, :class => "action new") %>
   
+  <div><%= pluralize(@pages.size, 'Page') %> found</div>
   <table class="listing" summary="Page list">
   <tr class="header">
     <th>&nbsp;</th>
@@ -16,7 +17,7 @@
     <th>Actions</th>
   </tr>
     <% @pages.each do |page| %>
-    <tr>
+    <tr class="<%= cycle('odd', 'even') %>">
       <td><%= page.position %></td>
       <td><%= page.subject_id %></td>
       <td><%= page.name %></td>
