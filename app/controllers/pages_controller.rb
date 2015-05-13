@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   layout false
   
   def index
-    @pages = Page.newest_first
+    @pages = Page.sorted
   end
 
   def show
