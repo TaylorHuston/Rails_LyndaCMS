@@ -7,3 +7,11 @@
 <br />
 
 <%= link_to('Hello with parameters',{:action => 'hello', :page => 5, :id => 20}) %>
+
+<br />
+
+<% name = "sorry'); alert('youve been hacked')" %>
+
+<%= link_to('Roar', '#', :onclick => "jsRoar('#{j(name)}'); return true;") %>
+
+<%= javascript_tag "jsRoar('#{name}');" %>
