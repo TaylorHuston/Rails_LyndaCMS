@@ -1,4 +1,6 @@
-    <table summary="Subject form fields">
+<%= error_messages_for(@subject) %>
+
+<table summary="Subject form fields">
       <tr>
         <th><%= f.label(:name) %></th>
         <td><%= f.text_field(:name) %></td>

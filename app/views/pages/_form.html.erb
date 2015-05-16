@@ -1,4 +1,6 @@
-    <table summary="Page form fields">
+<%= error_messages_for(@page) %>
+
+  <table summary="Page form fields">
       <tr>
         <th><%= f.label(:subject_id, "Subject") %></th>
         <td><%= f.select(:subject_id, @subjects.map {|s| [s.name, s.id]}) %></td>
