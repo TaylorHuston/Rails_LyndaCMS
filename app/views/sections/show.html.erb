@@ -1,11 +1,11 @@
-<%= link_to("<< Back to List", {:action => "index"}, :class => "back-link") %>
+<%= link_to("<< Back to List", {:action => 'index', :page_id => @page.id}, :class => "back-link") %>
 
 <div class="sections show">
   <h2>Show Subject</h2>
 
   <table summary="Section detail view">
     <tr>
-      <th>Page IS</th>
+      <th>Page ID</th>
       <td><%= @section.page_id %></td>
     </tr>
     <tr>
