@@ -15,12 +15,17 @@ class Section < ActiveRecord::Base
   validates_inclusion_of :content_type, :in => CONTENT_TYPES, :message => "must be one of: #{CONTENT_TYPES.join(',')}}"
   validates_presence_of :content
 
+  scope :visible, lambda { where(:visible => true) }
+  scope :invisible, lambda { where(:visible => false) }
   scope :sorted, lambda {order("sections.position ASC") }
   scope :newest_first, lambda {order("sections.created_at ASC") }
-  
-  private
 
-def touch_page
+private
+
+    def touch_page
       page.touch
     end
+
+
+
 end
