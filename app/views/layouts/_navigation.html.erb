@@ -1,9 +1,10 @@
 <% subjects ||= [] %>
-<% if session[:id] == nil %>
+<% if session[:user_id] == nil %>
   <%= link_to("Login", :controller => 'access', :action => 'login') %>
 <% else %>
   <%= link_to("Admin", :controller => 'access', :action => 'index') %>
 <% end %>
+<br />
 <ul>
 <% subjects.each do |subject| %>
   <li>
